@@ -1,0 +1,25 @@
+# Исходная строка
+original_string = "Мне очень нравится изучать пайтон! Кажется, это самый легкий из мощных языков для изучения"
+
+# Вывод длины строки (количество символов)
+length_characters = len(original_string)
+print("Длина строки (количество символов):", length_characters)
+
+# Разбиваем строку на список слов и выводим длину списка (количество слов)
+words = original_string.split()
+length_words = len(words)
+print("Длина строки (количество слов):", length_words)
+
+# Функция для замены гласных букв в слове на #
+def replace_vowels(word):
+    vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ"
+    for vowel in vowels:
+        word = word.replace(vowel, '#')
+    return word
+
+# Заменяем гласные в каждом слове списка
+modified_words = [replace_vowels(word) for word in words]
+
+# Восстанавливаем строку из списка с уже замененными словами
+restored_string = ' '.join(modified_words)
+print("Восстановленная строка:", restored_string)
