@@ -32,4 +32,4 @@ entry_count = len(temp_set)
 print (entry_count)                
 
 # Print the total number of vowels in the name and the distinct vowels
-print(f'The name "{name}" contains distinct {entry_count} vowels: {", ".join(found_vowels)}')
+print(f'The name "{name}" contains {entry_count} distinct vowels: {", ".join(found_vowels)}')
