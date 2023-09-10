@@ -16,8 +16,8 @@ for letter in name:
         vowel_count += 1
         found_vowels.add(letter)
 
-temp = (", ".join(found_vowels))
-
+# Create a temporary variable to to host the result of found vowels
+temp = (", ".join(found_vowels)) 
 
 # Split the string into a list using ',' as the delimiter
 temp_list = temp.split(', ')
