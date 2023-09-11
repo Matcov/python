@@ -1,5 +1,5 @@
 # Get the user's input and set it to lowercases, otherwise the result would not be in lowercases
-name = input('Please enter your name to know the distinct vowels it contains: ').lower()
+name = input('Please enter your name or any other word or phrase \n to know the number distinct vowels it contains: ').lower()
 
 # Initialize a variable to count vowels
 vowel_count = 0
@@ -33,4 +33,4 @@ entry_count = len(temp_set)
 # print (entry_count)                
 
 # Print the total number of vowels in the name and the distinct vowels
-print(f'The name "{name}" contains {entry_count} distinct vowels: {", ".join(found_vowels)}')
+print(f'The name/word/phrase "{name}" contains {entry_count} distinct vowels: {", ".join(found_vowels)}')
