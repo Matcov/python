@@ -9,30 +9,31 @@ extra_cheese = input("Do you want extra cheese? Y or N ")
 
 #Write your code below this line 👇
 
-price = 0 # by this we are just declaring the variable
+bill = 0
 
 
 if size == 'S':
-    price = 15
+    bill += 15
     if add_pepperoni == 'Y':
-        price += 2
+        bill += 2
     
 
-if size == 'M':
-    price = 20
+elif size == 'M':
+    bill += 20
     if add_pepperoni == 'Y':
-        price += 3
+        bill += 3
     
 
-if size == "L":
-    price = 25
+else:
+    bill += 25
     if add_pepperoni == 'Y':
-        price += 3
+        bill += 3
     
 
 if extra_cheese == "Y":
-    price = price + 1
+    bill = bill + 1
 
 
 
-print (f'Your final bill is: ${price}.')
+print (f'Your final bill is: ${bill}.')
+
