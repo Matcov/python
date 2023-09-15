@@ -1,0 +1,90 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+
+import random
+
+
+
+choice_input = input ('What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n\n')
+
+my_choice = int (choice_input)
+
+if my_choice == 0:
+  material = 'Rock'
+elif my_choice == 1:
+  material = 'Paper'
+else:
+  material = 'Scissors'
+
+print()
+print(f'I chose: {material}')
+
+
+if my_choice == 0:
+  print (rock)
+elif my_choice == 1:
+  print (paper)
+elif my_choice == 2:
+  print (scissors)
+else:
+  print ('Please start again and do your precise choice')
+
+computer_choice = random.randint (0, 2)
+
+if computer_choice == 0:
+  material = 'Rock'
+elif computer_choice == 1:
+  material = 'Paper'
+else:
+  material = 'Scissors'
+
+print (f'Computer chose: {material}')
+
+if computer_choice == 0: 
+  print (rock)
+elif computer_choice == 1:
+  print (paper)
+else:
+  print (scissors)
+
+print ('********************************************')
+print ()
+print()
+##############################################################
+
+if (computer_choice == 0 and my_choice == 0) or (computer_choice == 1 and my_choice == 1) or (computer_choice == 2 and my_choice == 2):
+  print ('It\'s a draw')
+
+elif (computer_choice == 0 and my_choice == 1) or (computer_choice == 1 and my_choice == 2) or (computer_choice == 2 and my_choice == 0):
+  print ('I win')
+else:
+  print ('I lose')
+
+
+
