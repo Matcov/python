@@ -11,26 +11,21 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-#Eazy Level - Order not randomised:
-#e.g. 4 letter, 2 symbol, 2 number = JduE&!91
-
 total_number_inputs = nr_letters + nr_symbols + nr_numbers
 
-print ('Total number of inputs is: ', total_number_inputs)
 
-# Use random.sample to select 2 random numbers from the list
+print ('Total number of input symbols is: ', total_number_inputs)
+print ()
+
 random_numbers = random.sample(numbers, nr_numbers)
 random_letters = random.sample (letters, nr_letters)
 random_symbols = random.sample (symbols, nr_symbols)
 
-concatenated_list = letters+numbers+symbols
+randomly_concatenated_list = random_letters + random_numbers + random_symbols
 
-
-password_list = random.sample (concatenated_list, total_number_inputs)
+password_list = random.sample (randomly_concatenated_list, total_number_inputs)
 
 # Join the elements in the list into a single string without commas
 password = ''.join(password_list)
 
 print ('The generated password is: ', password)
-
-
