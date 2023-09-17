@@ -15,11 +15,12 @@ full_range = list (range(1, 101))
 number = 0
 
 for number in full_range:
-    if (number % 3 == 0):
-        print ('Fizz')
+    if (number % 3 == 0) and (number % 5 == 0):
+        print ('FizzBuzz')
     elif (number % 5 == 0):
         print ('Buzz')
-    elif (number % 3 == 0) and (number % 5 == 0):
-        print ('FizzBuzz')
+    elif (number % 3 == 0):
+        print ('Fizz')
+        
     else: 
         print (number)
